@@ -42,6 +42,16 @@ $(document).ready(function() {$.ajax({
 		$last = document.querySelector("[name = 'lName']");
 		$pass = document.querySelector("[name = 'pwd']");
 		
+		$.post("saveUser.php",{
+				"fname":$first,
+				"lname":$last,
+				"password":$pass
+			},
+			function(data,status) {
+				console.log(status);
+			}
+		);
+		/*
 		$.ajax({
 			url:"saveUser.php",
 			method:"POST",
@@ -52,6 +62,6 @@ $(document).ready(function() {$.ajax({
 			}
 		}).done(function() {
 			console.log("Saved");
-		})
+		})*/
 	});
 });
