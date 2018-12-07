@@ -8,8 +8,8 @@
 		"Last Name" :$last,
 		"Password" : $pass
 	}
-	$file = $fopen("user.json","w") or die("Was unable to open file");
-	$fwrite($response,$filesize($file));
-	$fclose($file);
+	$file = fopen("user.json","w") or die("Was unable to open file");
+	fwrite($response,$filesize($file));
+	fclose($file);
 	echo "Saved";
 ?>
