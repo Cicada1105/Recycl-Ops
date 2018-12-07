@@ -43,16 +43,8 @@ $(document).ready(function() {$.ajax({
 		$pass = document.getElementById("pwd").value;
 		
 		console.log($first + "<br />" + $last + "<br />" + $pass + "<br />");
-		$.post("saveUser.php",{
-				"fname":$first,
-				"lname":$last,
-				"password":$pass
-			},
-			function(data,status) {
-				console.log(status);
-			}
-		);
-		/*
+		
+		
 		$.ajax({
 			url:"saveUser.php",
 			method:"POST",
@@ -63,6 +55,6 @@ $(document).ready(function() {$.ajax({
 			}
 		}).done(function() {
 			console.log("Saved");
-		})*/
+		})
 	});
 });
