@@ -38,9 +38,10 @@ $(document).ready(function() {$.ajax({
 		});
 	});
 	$("#save").click(function() {
-		$first =$("[name = 'fname']").val();
-		$last = $("[name = 'lname']").val();
-		$pass = $("[name = 'pwd']").val()
+		$first = document.getElementById("fname").value;
+		$last = document.getElementById("lname").value;
+		$pass = document.getElementById("pwd").value;
+		
 		console.log($first + "<br />" + $last + "<br />" + $pass + "<br />");
 		$.post("saveUser.php",{
 				"fname":$first,
