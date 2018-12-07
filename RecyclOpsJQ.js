@@ -38,10 +38,9 @@ $(document).ready(function() {$.ajax({
 		});
 	});
 	$("#save").click(function() {
-		$first = document.querySelector("[name = 'fName']");
-		$last = document.querySelector("[name = 'lName']");
-		$pass = document.querySelector("[name = 'pwd']");
-		
+		$first = document.querySelector("[name = 'fName']").value;
+		$last = document.querySelector("[name = 'lName']").value;
+		$pass = document.querySelector("[name = 'pwd']").value;
 		$.post("saveUser.php",{
 				"fname":$first,
 				"lname":$last,
