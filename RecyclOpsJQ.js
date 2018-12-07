@@ -37,4 +37,21 @@ $(document).ready(function() {$.ajax({
 			}
 		});
 	});
+	$("#save").click(function() {
+		$first = document.querySelector("[name = 'fName']");
+		$last = document.querySelector("[name = 'lName']");
+		$pass = document.querySelector("[name = 'pwd']");
+		
+		$.ajax({
+			url:"saveUser.php",
+			method:"POST",
+			data: {
+				"fname":$first,
+				"lname":$last,
+				"password":$pass
+			}
+		}).done(function() {
+			console.log("Saved");
+		})
+	});
 });
