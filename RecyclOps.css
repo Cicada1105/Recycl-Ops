@@ -54,7 +54,6 @@ input:focus {
 	box-shadow:5px 5px 20px #32CD32;
 }
 #userInput {
-	background-color:orange;
 	position:fixed;
 	padding-top:1.5%;
 	width:30%;
