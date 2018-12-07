@@ -42,17 +42,18 @@ $(document).ready(function() {$.ajax({
 		$last = document.getElementById("lname").value;
 		$pass = document.getElementById("pwd").value;
 		
+		$info = JSON.stringify({
+				"fname":$first,
+				"lname":$last,
+				"password":$pass
+			});
 		console.log($first + "<br />" + $last + "<br />" + $pass + "<br />");
 		
 		
 		$.ajax({
 			url:"saveUser.php",
 			method:"POST",
-			data: {
-				"fname":$first,
-				"lname":$last,
-				"password":$pass
-			}
+			data: $info
 		}).done(function() {
 			console.log("Saved");
 		})
