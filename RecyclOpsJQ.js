@@ -47,8 +47,7 @@ $(document).ready(function() {$.ajax({
 				"lname":$last,
 				"password":$pass
 			});
-		console.log($first + "<br />" + $last + "<br />" + $pass + "<br />");
-		
+		console.log($info);
 		
 		$.ajax({
 			url:"saveUser.php",
